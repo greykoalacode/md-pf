@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+body{
+    margin: 0 !important;
+    padding: 0;
+    font-family: 'Kaushan Script', cursive;
+    color: #0e2181;
+}
+
+.poster {
+    background: rgb(255,255,255);
+    background: linear-gradient(330deg, rgba(255,255,255,1) 48%, rgba(255,218,233,1) 66%);
+    height: 100vh;
+    padding: 4em;
+    &-image{
+        margin: 5em;
+    }
+    &-title {
+        font-size: 5em;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        &-2{
+            text-align: center;
+        }
+    }
+}
