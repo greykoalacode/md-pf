@@ -33,7 +33,7 @@ function Education() {
   return (
     <Box className="education" padding="2.5">
         <Text fontSize="4xl" className="education-title">Education</Text>
-        <VerticalTimeline>
+        <VerticalTimeline animate={false}>
             {
                 demoEducationData
                 .sort((a,b) => descending(a,b,'fromYear'))
