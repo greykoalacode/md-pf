@@ -1,4 +1,6 @@
+import { Stack } from '@chakra-ui/layout'
 import { Link, Text, VStack, Wrap, WrapItem } from '@chakra-ui/layout'
+import { Flex } from '@chakra-ui/layout'
 import { Box } from '@chakra-ui/layout'
 import Image from 'next/image'
 import React from 'react'
@@ -15,12 +17,12 @@ function ReachOut() {
                             each => {
                                 const {id, platformName, link, logo} = each;
                                 return(
-                                    <WrapItem key={id}>
+                                    <WrapItem key={id} minW="100px" >
                                         <Link isExternal href={link} m={[2,3,10]}>
-                                            <VStack backgroundColor="#ffadce" padding="1em" borderRadius="1em">
+                                            <Flex direction="column" justifyContent="center" alignItems="center" backgroundColor="#ffadce" padding="1em" borderRadius="1em">
                                                 <Image src={logo} width={32} height={32} />
-                                                <Text fontSize="lg" className="paragraph">{platformName}</Text>
-                                            </VStack>
+                                                <Text fontSize="md" className="paragraph">{platformName}</Text>
+                                            </Flex>
                                         </Link>
                                     </WrapItem>
                                 )
