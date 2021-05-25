@@ -3,7 +3,6 @@ import { Text } from '@chakra-ui/layout'
 import { WrapItem } from '@chakra-ui/layout'
 import { Link } from '@chakra-ui/layout'
 import { Wrap } from '@chakra-ui/layout'
-import { HStack } from '@chakra-ui/layout'
 import { Grid } from '@chakra-ui/layout'
 import { VStack } from '@chakra-ui/layout'
 import { Box } from '@chakra-ui/layout'
@@ -71,9 +70,8 @@ const ExperienceCard = ({project_title, fromYear, toYear, description, technolog
 
 function Experience() {
     return (
-        <Wrap justify="space-between" className="experience">
-            <WrapItem>
-                <VStack>
+        <Grid  templateColumns="repeat(auto-fit, minmax(500px,1fr)" justifyContent="space-between" className="experience">
+            <VStack>
                 <Text fontSize="4xl" className="experience-title">Learnings & Experiences</Text>
                 <Wrap className="experience-box" spacing={[3,null,10]}>
                 {
@@ -87,28 +85,23 @@ function Experience() {
                     )
                 }
                 </Wrap>
-                </VStack>
-            </WrapItem>
-            <WrapItem>
-                <Box>
-                    <Text fontSize="4xl" className="experience-title">Certifications</Text>
-                    <Box className="experience-box certification-box">
-                    {
-                        demoCertificationData.map(
-                            each => {
-                            const {id, title, subtitle, link} = each;
-                            return(
-                                // <WrapItem maxW="180px" key={id}>
-                                    <CertificationCard key={id} title={title} subtitle={subtitle} link={link} />
-                                // </WrapItem>
-                            )
-                        }
+            </VStack>
+            <VStack align="stretch">
+                <Text fontSize="4xl" className="experience-title">Certifications</Text>
+                <Wrap spacing={[2,3,5]} justify="space-between" className="experience-box">
+                {
+                    demoCertificationData.map(
+                        each => {
+                        const {id, title, subtitle, link} = each;
+                        return(
+                            <CertificationCard key={id} title={title} subtitle={subtitle} link={link} />
                         )
                     }
-                    </Box>
-                </Box>
-            </WrapItem>
-        </Wrap>
+                    )
+                }
+                </Wrap>
+            </VStack>
+        </Grid>
     )
 }
 

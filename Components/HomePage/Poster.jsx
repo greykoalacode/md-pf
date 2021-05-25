@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Flex } from "@chakra-ui/layout";
 import { motion } from "framer-motion";
 import { SimpleGrid } from "@chakra-ui/layout";
+import { Link } from "@chakra-ui/layout";
 
 function Poster() {
   return (
@@ -21,7 +22,9 @@ function Poster() {
                 height={500}
             />
         </Flex>
-        <motion.p initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ease: 'linear', delay: 1.3}} className="poster-about-link">About Me</motion.p>
+        <Link href="#about">
+          <motion.p initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ease: 'linear', delay: 1.3}} className="poster-about-link">About Me</motion.p>
+        </Link>
     </div>
   );
 }

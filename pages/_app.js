@@ -4,6 +4,7 @@ import '../styles/Poster.scss';
 import '../styles/About.scss';
 import '../styles/Education.scss';
 import '../styles/Experience.scss';
+import '../styles/ReachOut.scss';
 
 function MyApp({ Component, pageProps }) {
   return (

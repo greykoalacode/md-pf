@@ -8,6 +8,7 @@ $small: 321px;
     padding: 3em;
     &-title {
         padding: 0 1em;
+        text-align: center;
     }
     &-box{
         padding: 1em;
@@ -23,6 +24,7 @@ $small: 321px;
         padding: 1.5em !important;
         &-title {
             padding: 0em;
+            text-align: center;
         }
         &-box{
             padding: 0;

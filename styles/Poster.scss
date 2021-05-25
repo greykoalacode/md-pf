@@ -55,7 +55,7 @@ body{
     &-about{
         &-link{
             font-size: 1.5em;
-            // color: #ffdae9 !important;
+            color: #0e2181 !important;
             text-align: center;
             align-self:flex-end;
         }
@@ -79,6 +79,7 @@ body{
        &-about-link{
            background-color: #0e2181;
            padding: 0.75em;
+           color: #ffdae9 !important;
            width: fit-content;
            border-radius: 0.5em 1em;
            float: right;

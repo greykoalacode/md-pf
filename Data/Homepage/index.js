@@ -1,3 +1,6 @@
+import Image from "next/image";
+
+
 const demoEducationData = [
     {
       "id": 1,
@@ -179,6 +182,39 @@ const demoCertificationData = [{
   "title": "Java RMI",
   "subtitle": "Yacero",
   "link": "https://php.net/pretium.jsp?justo=justo&in=sollicitudin&blandit=ut&ultrices=suscipit&enim=a&lorem=feugiat&ipsum=et&dolor=eros&sit=vestibulum&amet=ac&consectetuer=est&adipiscing=lacinia&elit=nisi&proin=venenatis&interdum=tristique&mauris=fusce&non=congue&ligula=diam&pellentesque=id&ultrices=ornare&phasellus=imperdiet&id=sapien&sapien=urna&in=pretium&sapien=nisl&iaculis=ut&congue=volutpat&vivamus=sapien&metus=arcu&arcu=sed&adipiscing=augue&molestie=aliquam&hendrerit=erat&at=volutpat&vulputate=in&vitae=congue&nisl=etiam&aenean=justo&lectus=etiam&pellentesque=pretium&eget=iaculis&nunc=justo&donec=in&quis=hac&orci=habitasse&eget=platea&orci=dictumst&vehicula=etiam&condimentum=faucibus&curabitur=cursus&in=urna&libero=ut&ut=tellus&massa=nulla&volutpat=ut&convallis=erat&morbi=id&odio=mauris&odio=vulputate&elementum=elementum&eu=nullam&interdum=varius&eu=nulla&tincidunt=facilisi&in=cras&leo=non&maecenas=velit&pulvinar=nec&lobortis=nisi&est=vulputate&phasellus=nonummy"
-}]; 
+}];
 
-  export { demoEducationData, demoExperienceData, demoCertificationData }
+const platforms = [
+  {
+    id: 1,
+    platformName: 'Mail',
+    link: 'mailto:kmaddy9122@gmail.com',
+    logo: "/images/gmail.png"
+  },
+  {
+    id: 2,
+    platformName: 'Facebook',
+    link: 'https://www.facebook.com',
+    logo: "/images/facebook.png"
+  },
+  {
+    id: 3,
+    platformName: 'LinkedIn',
+    link: 'https://www.linkedin.com',
+    logo: "/images/linkedin.png"
+  },
+  {
+    id: 4,
+    platformName: 'HackerRank',
+    link: 'https://www.hackerrank.com',
+    logo: "/images/hackerrank.png"
+  },
+  {
+    id: 5,
+    platformName: 'Codechef',
+    link: 'https://www.codechef.com',
+    logo: "/images/codechef.png"
+  },
+]
+
+  export { demoEducationData, demoExperienceData, demoCertificationData, platforms }

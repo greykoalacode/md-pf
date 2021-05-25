@@ -1,5 +1,5 @@
 import { Stack, Wrap, WrapItem } from '@chakra-ui/layout'
-import { Box, Flex, ListItem, SimpleGrid, UnorderedList } from '@chakra-ui/layout'
+import { Box } from '@chakra-ui/layout'
 import { HStack } from '@chakra-ui/layout'
 import { Text } from '@chakra-ui/layout'
 import { TagLabel } from '@chakra-ui/tag'
@@ -36,10 +36,10 @@ const TitleDetail = ({title, detail, languages}) => {
 
 function About() {
     return (
-        <Box padding="4.5em" backgroundColor="#ffdae9" className="about">
+        <Box id="about" padding="4.5em" backgroundColor="#ffdae9" className="about">
             <Box padding="2.5em" className="about-1">
                 <Text fontSize="5xl" className="about-title">About</Text>
-                <Wrap justify="space-between" align="center" >
+                <Wrap justify={["center","center","center","center","space-between"]} align="center" >
                     <WrapItem>
                         <TextCard>
                             <Text fontSize="lg" className="paragraph">
@@ -47,7 +47,7 @@ function About() {
                             </Text>
                         </TextCard>
                     </WrapItem>
-                    <WrapItem>
+                    <WrapItem alignContent="center">
                         <Image
                             // className="poster-image"
                             src="/images/second.png"

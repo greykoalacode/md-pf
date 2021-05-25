@@ -3,6 +3,7 @@ import About from '../Components/HomePage/About'
 import Education from '../Components/HomePage/Education'
 import Experience from '../Components/HomePage/Experience'
 import Poster from '../Components/HomePage/Poster'
+import ReachOut from '../Components/HomePage/ReachOut'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <About />
       <Education />
       <Experience />
+      <ReachOut />
     </div>
   )
 }

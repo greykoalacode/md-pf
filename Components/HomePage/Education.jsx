@@ -1,5 +1,3 @@
-import Icon from "@chakra-ui/icon";
-import { CloseIcon } from "@chakra-ui/icons";
 import { Box, Text } from "@chakra-ui/layout";
 import Image from "next/image";
 import React from "react";
