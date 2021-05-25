@@ -1,0 +1,18 @@
+$large: 1025px;
+$medium: 426px;
+$tablet: 769px;
+$small: 321px;
+
+.education{
+    background-color: #ffdae9;
+    padding: 3em !important;
+    &-title {
+        padding: 0 1em;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .education{
+        padding: 3em 2em !important;
+    }
+}

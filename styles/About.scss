@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+$large: 1025px;
+$medium: 426px;
+$tablet: 769px;
+$small: 321px;
+$blue: #0e2181;
+$light-pink: #ffdae9;
+
+.about{
+    // background: rgb(255,218,233);
+    // background: linear-gradient(330deg, rgba(255,218,233,1) 76%, rgba(37,51,139,1) 76%, rgba(37,51,139,1) 93.5%, rgba(255,218,233,1) 93.5%);
+    min-height: 100vh;
+    background-color: $light-pink;
+    // &-title{
+    //     // color: #ffdae9 !important;
+    // }
+}
+
+.paragraph{
+    font-family: 'DM Sans', sans-serif !important;
+    text-align: justify;
+    margin-top: 0 !important;
+}
+
+@media screen and (max-width: $large){
+    .about{
+        background: rgb(255,218,233);
+        background: linear-gradient(135deg, rgba(255,218,233,1) 19.2%, rgba(37,51,139,1) 19.2%, rgba(37,51,139,1) 22.8%, rgba(255,218,233,1) 22.8%);
+        &-1{
+            padding: 0 !important;
+        }
+        &-title{
+            color: $blue !important;
+        }
+    }
+}
+@media screen and (max-width: $tablet){
+    .about{
+        padding: 3em 2em !important;
+    }
+}

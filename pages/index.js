@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import About from '../Components/HomePage/About'
+import Education from '../Components/HomePage/Education'
+import Experience from '../Components/HomePage/Experience'
 import Poster from '../Components/HomePage/Poster'
 
 export default function Home() {
@@ -10,6 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Poster />
+      <About />
+      <Education />
+      <Experience />
     </div>
   )
 }

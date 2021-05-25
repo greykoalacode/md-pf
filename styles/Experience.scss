@@ -1,0 +1,31 @@
+$large: 1025px;
+$medium: 426px;
+$tablet: 769px;
+$small: 321px;
+
+.experience{
+    background-color: #ffdae9;
+    padding: 3em;
+    &-title {
+        padding: 0 1em;
+    }
+    &-box{
+        padding: 1em;
+    }
+}
+@media screen and (max-width: $tablet) {
+    .experience{
+        padding: 3em 2em !important;
+    }
+}
+@media screen and (max-width: $medium) {
+    .experience{
+        padding: 1.5em !important;
+        &-title {
+            padding: 0em;
+        }
+        &-box{
+            padding: 0;
+        }
+    }
+}
