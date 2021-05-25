@@ -47,7 +47,7 @@ const ExperienceCard = ({project_title, fromYear, toYear, description, technolog
                     <Link href={project_link} isExternal className="paragraph">Check it here<ExternalLinkIcon mx="2" /></Link>
                 </WrapItem>
             </Wrap>
-            <Text fontWeight="bold" className="paragraph" pb="1">Technology / Domain</Text>
+            <Text fontWeight="bold"  className="paragraph" py="1">Technology / Domain</Text>
             <Wrap mb="2">
                 {
                     technologies
@@ -87,7 +87,7 @@ function Experience() {
                 </Wrap>
             </VStack>
             <VStack align="stretch">
-                <Text fontSize="4xl" className="experience-title">Certifications</Text>
+                <Text fontSize="4xl" mt="5" className="experience-title">Certifications</Text>
                 <Wrap spacing={[2,3,5]} justify="space-between" className="experience-box">
                 {
                     demoCertificationData.map(
