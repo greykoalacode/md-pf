@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useState } from 'react';
 const ApiKey = process.env.NEXT_PUBLIC_API_KEY;
 const BaseID = process.env.NEXT_PUBLIC_BASE_ID;
-console.log(ApiKey,BaseID)
+// console.log(ApiKey,BaseID)
 new Airtable({apiKey: ApiKey}).base(BaseID);
 
 axios.defaults.baseURL = `https://api.airtable.com/v0/${BaseID}`;
