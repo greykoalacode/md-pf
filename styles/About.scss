@@ -20,6 +20,11 @@ $light-pink: #ffdae9;
     font-family: 'DM Sans', sans-serif !important;
     text-align: justify;
     margin-top: 0 !important;
+    &-trunc{
+        font-family: 'DM Sans', sans-serif !important;
+        margin-top: 0 !important;
+        margin: 0.35em 0em !important;
+    }
 }
 
 @media screen and (max-width: $large){

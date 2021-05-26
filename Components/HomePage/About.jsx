@@ -32,41 +32,58 @@ const TitleDetail = ({title, detail, languages}) => {
             
         </Stack>
     )
+};
+
+const HobbyCard = ({hobby}) => {
+    return (
+        <Box backgroundColor="#ffadce" padding="0.5em" margin="1em" borderRadius="1em">
+            <Text className="paragraph" fontWeight="bold">{hobby}</Text>
+        </Box>
+    )
 }
 
-function About() {
+function About({about}) {
     return (
         <Box id="about" padding="4.5em" backgroundColor="#ffdae9" className="about">
-            <Box padding="2.5em" className="about-1">
+            <Box padding="0" className="about-1">
                 <Text fontSize="5xl" className="about-title">About</Text>
                 <Wrap justify={["center","center","center","center","space-between"]} align="center" >
                     <WrapItem>
                         <TextCard>
                             <Text fontSize="lg" className="paragraph">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio cumque temporibus quas, accusamus, molestias quos ipsam quidem mollitia voluptate optio fugiat voluptates impedit repellat, corrupti minus blanditiis ad expedita voluptatum laudantium exercitationem. Consequatur, assumenda! Optio nostrum eligendi odit velit.
+                                {about.about_me}
+                            {/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio cumque temporibus quas, accusamus, molestias quos ipsam quidem mollitia voluptate optio fugiat voluptates impedit repellat, corrupti minus blanditiis ad expedita voluptatum laudantium exercitationem. Consequatur, assumenda! Optio nostrum eligendi odit velit. */}
                             </Text>
                         </TextCard>
                     </WrapItem>
                     <WrapItem alignContent="center">
                         <Image
-                            // className="poster-image"
                             src="/images/second.png"
                             alt="Hello"
                             width={275}
                             height={450}
                         />
                     </WrapItem>
+                    <WrapItem maxW="250px">
+                        <Box>
+                            <Text fontSize="4xl">Skills</Text>
+                            <Wrap>
+                            {
+                                about.skills.split(',').map(
+                                    each => <HobbyCard key={each} hobby={each} />
+                                )
+                            }
+                            </Wrap>
+                            {/* <TextCard backgroundColor="#ffdae9" padding="0" className="paragraph">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio cumque temporibus quas, accusamus, molestias quos ipsam quidem mollitia voluptate optio fugiat voluptates impedit repellat, corrupti minus blanditiis ad expedita voluptatum laudantium exercitationem. Consequatur, assumenda! Optio nostrum eligendi odit velit.
+                            </TextCard> */}
+                        </Box>
+                        
+                    </WrapItem>
                 </Wrap>
             </Box>
-                <Wrap align="center" justify="center" spacing="2em">
-                    <WrapItem>
-                        <Box>
-                            <Text fontSize="4xl">Hobbies</Text>
-                            <TextCard backgroundColor="#ffdae9" padding="0" className="paragraph">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio cumque temporibus quas, accusamus, molestias quos ipsam quidem mollitia voluptate optio fugiat voluptates impedit repellat, corrupti minus blanditiis ad expedita voluptatum laudantium exercitationem. Consequatur, assumenda! Optio nostrum eligendi odit velit.
-                            </TextCard>
-                        </Box>
-                    </WrapItem>
+
+                <Wrap align="center" justify={["center","center","center","center","space-between"]} spacing="2em">
                     <WrapItem>
                         <Image
                             src="/images/sing.png"
@@ -75,12 +92,25 @@ function About() {
                             height={450}
                         />
                     </WrapItem>
+                    <WrapItem maxW="250px">
+                        <Box>
+                            <Text fontSize="4xl">Hobbies</Text>
+                            <Wrap>
+                            {
+                                about.hobbies.split(',').map(
+                                    each => <HobbyCard key={each} hobby={each} />
+                                )
+                            }
+                            </Wrap>
+                        </Box>
+                    </WrapItem>
                     <WrapItem>
                         <TextCard>
                             <Text fontSize="4xl">Key Details</Text>
-                            <TitleDetail title="Email" detail="christinemarvell@gmail.com" />
-                            <TitleDetail title="Address" detail="Navi Mumbai, Maharashtra, India" />
-                            <TitleDetail title="Languages" languages={['English', 'Hindi', 'Marathi']} />
+                            <TitleDetail title="Email" detail={about.email} />
+                            <TitleDetail title="Address" detail={about.address} />
+                            <TitleDetail title="Date of Birth" detail={about.dob} />
+                            <TitleDetail title="Languages" languages={about.languages.split(',')} />
                         </TextCard>
                     </WrapItem>
                 </Wrap>

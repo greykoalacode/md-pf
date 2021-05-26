@@ -3,6 +3,7 @@ import { Text } from '@chakra-ui/layout'
 import { WrapItem } from '@chakra-ui/layout'
 import { Link } from '@chakra-ui/layout'
 import { Wrap } from '@chakra-ui/layout'
+import { Flex } from '@chakra-ui/layout'
 import { Grid } from '@chakra-ui/layout'
 import { VStack } from '@chakra-ui/layout'
 import { Box } from '@chakra-ui/layout'
@@ -14,12 +15,12 @@ import { descending } from '../../utils/sort';
 const CertificationCard= ({title, subtitle, link}) => {
     return (
         <Box padding={[1,2,3]} margin={[1,2,3]}>
-            <Wrap align="center" justify="space-between">
-                <Text fontWeight="bold" className="paragraph" my="1" fontSize="2xl">{title}</Text>
-                <Link isExternal href={link}>
-                    <ExternalLinkIcon />
-                </Link>
-            </Wrap>
+            <Link isExternal href={link}>
+                <Flex alignItems="center">
+                    <Text fontWeight="bold" className="paragraph-trunc" my="1" fontSize="2xl">{title}</Text>
+                    <ExternalLinkIcon ml="3" />
+                </Flex>
+            </Link>
             <Text my="1" className="paragraph">{subtitle}</Text>
         </Box>
     )
@@ -87,9 +88,9 @@ function Experience({experience, certification}) {
                 }
                 </Wrap>
             </VStack>
-            <VStack align="stretch">
-                <Text fontSize="4xl" mt="5" className="experience-title">Certifications</Text>
-                <Wrap spacing={[2,3,5]} justify="space-between" className="experience-box">
+            <VStack align="stretch" mt="20">
+                <Text fontSize="4xl" className="experience-title">Certifications</Text>
+                <Wrap spacing={[2,3,5]} justify="flex-start" className="experience-box">
                 {
                     certification.map(
                         each => {

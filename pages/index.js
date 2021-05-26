@@ -23,8 +23,7 @@ import useData from '../handlers'
 
 export default function Home() {
   const { data, getData } = useData();
-  // console.log(process.env.NEXT_PUBLIC_API_KEY)
-  // console.log(props)
+
   useEffect(() => {
     async function onPageLoad (){
       await getData();
@@ -43,7 +42,7 @@ export default function Home() {
         data && (
           <>
             <Poster />
-            <About />
+            <About about={data[4].data.records[0].fields} />
             <Education education={data[3].data.records} />
             <Experience experience={data[0].data.records} certification={data[2].data.records} />
             <ReachOut platforms={data[1].data.records} />

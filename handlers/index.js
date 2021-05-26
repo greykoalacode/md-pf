@@ -16,7 +16,7 @@ export default function useData() {
     const[data, setData] = useState(null);
 
     const getData = async () => {
-        const endpoints = ['/Projects','/Platforms','/Certifications', '/Education'];
+        const endpoints = ['/Projects','/Platforms','/Certifications', '/Education', '/About'];
         const requests = endpoints.map(
             each => axios.get(each)
         )

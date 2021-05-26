@@ -18,11 +18,11 @@ function ReachOut({platforms}) {
                                 const {id, platformName, link, logo} = each.fields;
                                 // console.log(logo)
                                 return(
-                                    <WrapItem key={id} minW="100px" >
-                                        <Link isExternal href={link} m={[2,3,10]}>
+                                    <WrapItem key={id}>
+                                        <Link w="120px" isExternal href={link} m={[2,3,10]}>
                                             <Flex direction="column" justifyContent="center" alignItems="center" backgroundColor="#ffadce" padding="1em" borderRadius="1em">
-                                                <Image src={logo[0].url} width={32} height={32} />
-                                                <Text fontSize="md" className="paragraph">{platformName}</Text>
+                                                <Image src={logo[0].url} width={48} height={48} />
+                                                <Text fontWeight="bold" fontSize="md" className="paragraph">{platformName}</Text>
                                             </Flex>
                                         </Link>
                                     </WrapItem>

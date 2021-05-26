@@ -10,17 +10,21 @@ import { demoEducationData } from "../../Data/Homepage";
 import { descending } from "../../utils/sort";
 
 const EachEvent =({ title, subtitle, description, fromYear, toYear}) => {
+    // const fromMonth = new Date(fromYear).getMonth()
+    // const ToMonth = new Date(toYear).getMonth()
+    // const fromYearStr = new Date(toYear).getYear()
+    // const ToYearStr = new Date(toYear).getYear()
     return (
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "#ffadce", color: "#fff", borderRadius: '1em' }}
           contentArrowStyle={{ borderRight: "7px solid  #ffadce" }}
-          date={`${fromYear} - ${toYear}`}
+          date={toYear ? `${fromYear} - ${toYear}` : `${fromYear} -`}
           iconStyle={{ background: "#ffadce", color: "#fff", padding: '5px' }}
           icon={<Image layout="responsive" width={24} height={24} src="/images/school.png" />}
         >
-          <Text fontSize="2xl" fontWeight="bold !important" className="vertical-timeline-element-title paragraph">{title}</Text>
-          <Text fontSize="xl" className="vertical-timeline-element-subtitle paragraph">{subtitle}</Text>
+          <Text fontSize="2xl" fontWeight="bold !important" className="vertical-timeline-element-title paragraph-trunc">{title}</Text>
+          <Text fontSize="xl" className="vertical-timeline-element-subtitle paragraph-trunc">{subtitle}</Text>
           <Text className="paragraph">
             {description}
           </Text>
@@ -41,7 +45,7 @@ function Education({education}) {
                     each => {
                         const {id, institution, education, description, fromYear, toYear} = each.fields;
                         return (
-                            <EachEvent key={id} title={institution} subtitle={education} description={description} fromYear={fromYear} toYear={toYear} />
+                            <EachEvent key={id} subtitle={institution} title={education} description={description} fromYear={fromYear} toYear={toYear} />
 
                         )
                     }

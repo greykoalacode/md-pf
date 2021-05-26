@@ -11,8 +11,8 @@ function Poster() {
       {/* <Text className="poster-title" textAlign="center">Christine</Text> */}
         <Flex alignItems="center" justifyContent="space-between" className="poster-flex">
             <SimpleGrid gap={['1em', null, '2.5em']}>
-                <motion.h1 initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ease: 'linear', delay: 0.5}} className="poster-title">Christine</motion.h1>
-                <motion.h1 initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ease: 'linear', delay: 1}} className="poster-title poster-title-2">Marvell</motion.h1>
+                <motion.h1 initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ease: 'linear', delay: 0.5}} className="poster-title">Manasi</motion.h1>
+                <motion.h1 initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ease: 'linear', delay: 1}} className="poster-title poster-title-2">Deshpande</motion.h1>
             </SimpleGrid>
             <Image
                 className="poster-image"
