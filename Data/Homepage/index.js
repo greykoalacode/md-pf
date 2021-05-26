@@ -2,159 +2,159 @@ import Image from "next/image";
 
 
 const demoEducationData = [
-    {
-      "id": 1,
-      "institution": "Université de Kamina",
-      "education": "Account Executive",
-      "location": "94024 Calypso Drive",
-      "description": "reinvent turn-key models",
-      "fromYear": 2001,
-      "toYear": 2010
-    },
-    {
-      "id": 2,
-      "institution": "Thames Valley University",
-      "education": "Sales Associate",
-      "location": "77 Waubesa Hill",
-      "description": "repurpose world-class interfaces",
-      "fromYear": 1993,
-      "toYear": 1987
-    },
-    {
-      "id": 3,
-      "institution": "Universitas Muslim Indonesia",
-      "education": "Executive Secretary",
-      "location": "286 Buena Vista Way",
-      "description": "synthesize virtual partnerships",
-      "fromYear": 2003,
-      "toYear": 2000
-    },
-    {
-      "id": 4,
-      "institution": "Universidad Tecnológica América",
-      "education": "Programmer III",
-      "location": "0293 Forest Terrace",
-      "description": "e-enable customized synergies",
-      "fromYear": 1997,
-      "toYear": 1992
-    },
-    {
-      "id": 5,
-      "institution": "Pohang University of Science and Technology",
-      "education": "Developer IV",
-      "location": "410 Lawn Terrace",
-      "description": "unleash collaborative architectures",
-      "fromYear": 1999,
-      "toYear": 2003
-    },
-    {
-      "id": 6,
-      "institution": "University of Tennessee - Martin",
-      "education": "Actuary",
-      "location": "85670 Haas Terrace",
-      "description": "revolutionize synergistic e-markets",
-      "fromYear": 2007,
-      "toYear": 2012
-    },
-    {
-      "id": 7,
-      "institution": "St. Petersburg State University of Telecommunication",
-      "education": "Internal Auditor",
-      "location": "21737 Manufacturers Center",
-      "description": "incubate efficient communities",
-      "fromYear": 2008,
-      "toYear": 1985
-    },
-    {
-      "id": 8,
-      "institution": "Kutztown University of Pennsylvania",
-      "education": "Structural Analysis Engineer",
-      "location": "80 Alpine Pass",
-      "description": "integrate visionary systems",
-      "fromYear": 1995,
-      "toYear": 1992
-    },
-    {
-      "id": 9,
-      "institution": "Piedmont College",
-      "education": "Professor",
-      "location": "149 Tony Park",
-      "description": "embrace revolutionary content",
-      "fromYear": 1966,
-      "toYear": 1987
-    },
-    {
-      "id": 10,
-      "institution": "West Suburban College of Nursing",
-      "education": "Recruiting Manager",
-      "location": "88 Delaware Way",
-      "description": "grow turn-key deliverables",
-      "fromYear": 2002,
-      "toYear": 1993
-    }
-  ];
-
-  const demoExperienceData = [{
+  {
     "id": 1,
-    "project_title": "Cheyney University of Pennsylvania",
-    "description": "Zosterops pallidus",
-    "technologies": [
-      "in magna bibendum",
-      "elementum nullam varius",
-      "eu"
-    ],
-    "fromYear": 1989,
-    "project_link" : "http://economist.com/ut.jpg?condimentum=auctor&id=sed&luctus=tristique&nec=in&molestie=tempus&sed=sit&justo=amet&pellentesque=sem&viverra=fusce&pede=consequat&ac=nulla&diam=nisl&cras=nunc&pellentesque=nisl&volutpat=duis&dui=bibendum&maecenas=felis&tristique=sed&est=interdum&et=venenatis&tempus=turpis&semper=enim&est=blandit&quam=mi&pharetra=in&magna=porttitor&ac=pede&consequat=justo&metus=eu&sapien=massa&ut=donec&nunc=dapibus&vestibulum=duis&ante=at&ipsum=velit&primis=eu&in=est&faucibus=congue&orci=elementum&luctus=in&et=hac&ultrices=habitasse",
+    "institution": "Université de Kamina",
+    "education": "Account Executive",
+    "location": "94024 Calypso Drive",
+    "description": "reinvent turn-key models",
+    "fromYear": 2001,
     "toYear": 2010
-  }, {
+  },
+  {
     "id": 2,
-    "project_title": "Universidad de la Tercera Edad",
-    "description": "Panthera leo",
-    "technologies": [
-      "curabitur",
-      "tortor",
-      "tellus semper interdum"
-    ],
-    "project_link" : "http://economist.com/ut.jpg?condimentum=auctor&id=sed&luctus=tristique&nec=in&molestie=tempus&sed=sit&justo=amet&pellentesque=sem&viverra=fusce&pede=consequat&ac=nulla&diam=nisl&cras=nunc&pellentesque=nisl&volutpat=duis&dui=bibendum&maecenas=felis&tristique=sed&est=interdum&et=venenatis&tempus=turpis&semper=enim&est=blandit&quam=mi&pharetra=in&magna=porttitor&ac=pede&consequat=justo&metus=eu&sapien=massa&ut=donec&nunc=dapibus&vestibulum=duis&ante=at&ipsum=velit&primis=eu&in=est&faucibus=congue&orci=elementum&luctus=in&et=hac&ultrices=habitasse",
-    "fromYear": 1996,
-    "toYear": 2001
-  }, {
+    "institution": "Thames Valley University",
+    "education": "Sales Associate",
+    "location": "77 Waubesa Hill",
+    "description": "repurpose world-class interfaces",
+    "fromYear": 1993,
+    "toYear": 1987
+  },
+  {
     "id": 3,
-    "project_title": "Escuela Superior Politécnica del Litoral",
-    "description": "Lutra canadensis",
-    "technologies": [
-      "cum",
-      "sapien dignissim",
-      "lorem ipsum dolor"
-    ],
-    "project_link" : "http://economist.com/ut.jpg?condimentum=auctor&id=sed&luctus=tristique&nec=in&molestie=tempus&sed=sit&justo=amet&pellentesque=sem&viverra=fusce&pede=consequat&ac=nulla&diam=nisl&cras=nunc&pellentesque=nisl&volutpat=duis&dui=bibendum&maecenas=felis&tristique=sed&est=interdum&et=venenatis&tempus=turpis&semper=enim&est=blandit&quam=mi&pharetra=in&magna=porttitor&ac=pede&consequat=justo&metus=eu&sapien=massa&ut=donec&nunc=dapibus&vestibulum=duis&ante=at&ipsum=velit&primis=eu&in=est&faucibus=congue&orci=elementum&luctus=in&et=hac&ultrices=habitasse",
-    "fromYear": 2002,
-    "toYear": 1968
-  }, {
+    "institution": "Universitas Muslim Indonesia",
+    "education": "Executive Secretary",
+    "location": "286 Buena Vista Way",
+    "description": "synthesize virtual partnerships",
+    "fromYear": 2003,
+    "toYear": 2000
+  },
+  {
     "id": 4,
-    "project_title": "Hochschule für Berufstätige Rendsburg",
-    "description": "Bubalus arnee",
-    "project_link" : "http://economist.com/ut.jpg?condimentum=auctor&id=sed&luctus=tristique&nec=in&molestie=tempus&sed=sit&justo=amet&pellentesque=sem&viverra=fusce&pede=consequat&ac=nulla&diam=nisl&cras=nunc&pellentesque=nisl&volutpat=duis&dui=bibendum&maecenas=felis&tristique=sed&est=interdum&et=venenatis&tempus=turpis&semper=enim&est=blandit&quam=mi&pharetra=in&magna=porttitor&ac=pede&consequat=justo&metus=eu&sapien=massa&ut=donec&nunc=dapibus&vestibulum=duis&ante=at&ipsum=velit&primis=eu&in=est&faucibus=congue&orci=elementum&luctus=in&et=hac&ultrices=habitasse",
-    "technologies": [
-      "curabitur at ipsum",
-      "sit amet erat",
-      "lectus"
-    ],
-    "fromYear": 2010,
-    "toYear": 2002
-  }, {
+    "institution": "Universidad Tecnológica América",
+    "education": "Programmer III",
+    "location": "0293 Forest Terrace",
+    "description": "e-enable customized synergies",
+    "fromYear": 1997,
+    "toYear": 1992
+  },
+  {
     "id": 5,
-    "project_title": "Université Panthéon-Sorbonne (Paris I)",
-    "description": "Corvus brachyrhynchos",
-    "project_link" : "http://economist.com/ut.jpg?condimentum=auctor&id=sed&luctus=tristique&nec=in&molestie=tempus&sed=sit&justo=amet&pellentesque=sem&viverra=fusce&pede=consequat&ac=nulla&diam=nisl&cras=nunc&pellentesque=nisl&volutpat=duis&dui=bibendum&maecenas=felis&tristique=sed&est=interdum&et=venenatis&tempus=turpis&semper=enim&est=blandit&quam=mi&pharetra=in&magna=porttitor&ac=pede&consequat=justo&metus=eu&sapien=massa&ut=donec&nunc=dapibus&vestibulum=duis&ante=at&ipsum=velit&primis=eu&in=est&faucibus=congue&orci=elementum&luctus=in&et=hac&ultrices=habitasse",
-    "technologies": [
-      "tempus vel pede",
-      "ut nulla sed",
-      "pede"
-    ],
-    "fromYear": 2006,
-    // "toYear": 1992
+    "institution": "Pohang University of Science and Technology",
+    "education": "Developer IV",
+    "location": "410 Lawn Terrace",
+    "description": "unleash collaborative architectures",
+    "fromYear": 1999,
+    "toYear": 2003
+  },
+  {
+    "id": 6,
+    "institution": "University of Tennessee - Martin",
+    "education": "Actuary",
+    "location": "85670 Haas Terrace",
+    "description": "revolutionize synergistic e-markets",
+    "fromYear": 2007,
+    "toYear": 2012
+  },
+  {
+    "id": 7,
+    "institution": "St. Petersburg State University of Telecommunication",
+    "education": "Internal Auditor",
+    "location": "21737 Manufacturers Center",
+    "description": "incubate efficient communities",
+    "fromYear": 2008,
+    "toYear": 1985
+  },
+  {
+    "id": 8,
+    "institution": "Kutztown University of Pennsylvania",
+    "education": "Structural Analysis Engineer",
+    "location": "80 Alpine Pass",
+    "description": "integrate visionary systems",
+    "fromYear": 1995,
+    "toYear": 1992
+  },
+  {
+    "id": 9,
+    "institution": "Piedmont College",
+    "education": "Professor",
+    "location": "149 Tony Park",
+    "description": "embrace revolutionary content",
+    "fromYear": 1966,
+    "toYear": 1987
+  },
+  {
+    "id": 10,
+    "institution": "West Suburban College of Nursing",
+    "education": "Recruiting Manager",
+    "location": "88 Delaware Way",
+    "description": "grow turn-key deliverables",
+    "fromYear": 2002,
+    "toYear": 1993
   }
+];
+
+const demoExperienceData = [{
+  "id": 1,
+  "project_title": "Cheyney University of Pennsylvania",
+  "description": "Zosterops pallidus",
+  "technologies": [
+    "in magna bibendum",
+    "elementum nullam varius",
+    "eu"
+  ],
+  "fromYear": 1989,
+  "project_link": "http://economist.com/ut.jpg?condimentum=auctor&id=sed&luctus=tristique&nec=in&molestie=tempus&sed=sit&justo=amet&pellentesque=sem&viverra=fusce&pede=consequat&ac=nulla&diam=nisl&cras=nunc&pellentesque=nisl&volutpat=duis&dui=bibendum&maecenas=felis&tristique=sed&est=interdum&et=venenatis&tempus=turpis&semper=enim&est=blandit&quam=mi&pharetra=in&magna=porttitor&ac=pede&consequat=justo&metus=eu&sapien=massa&ut=donec&nunc=dapibus&vestibulum=duis&ante=at&ipsum=velit&primis=eu&in=est&faucibus=congue&orci=elementum&luctus=in&et=hac&ultrices=habitasse",
+  "toYear": 2010
+}, {
+  "id": 2,
+  "project_title": "Universidad de la Tercera Edad",
+  "description": "Panthera leo",
+  "technologies": [
+    "curabitur",
+    "tortor",
+    "tellus semper interdum"
+  ],
+  "project_link": "http://economist.com/ut.jpg?condimentum=auctor&id=sed&luctus=tristique&nec=in&molestie=tempus&sed=sit&justo=amet&pellentesque=sem&viverra=fusce&pede=consequat&ac=nulla&diam=nisl&cras=nunc&pellentesque=nisl&volutpat=duis&dui=bibendum&maecenas=felis&tristique=sed&est=interdum&et=venenatis&tempus=turpis&semper=enim&est=blandit&quam=mi&pharetra=in&magna=porttitor&ac=pede&consequat=justo&metus=eu&sapien=massa&ut=donec&nunc=dapibus&vestibulum=duis&ante=at&ipsum=velit&primis=eu&in=est&faucibus=congue&orci=elementum&luctus=in&et=hac&ultrices=habitasse",
+  "fromYear": 1996,
+  "toYear": 2001
+}, {
+  "id": 3,
+  "project_title": "Escuela Superior Politécnica del Litoral",
+  "description": "Lutra canadensis",
+  "technologies": [
+    "cum",
+    "sapien dignissim",
+    "lorem ipsum dolor"
+  ],
+  "project_link": "http://economist.com/ut.jpg?condimentum=auctor&id=sed&luctus=tristique&nec=in&molestie=tempus&sed=sit&justo=amet&pellentesque=sem&viverra=fusce&pede=consequat&ac=nulla&diam=nisl&cras=nunc&pellentesque=nisl&volutpat=duis&dui=bibendum&maecenas=felis&tristique=sed&est=interdum&et=venenatis&tempus=turpis&semper=enim&est=blandit&quam=mi&pharetra=in&magna=porttitor&ac=pede&consequat=justo&metus=eu&sapien=massa&ut=donec&nunc=dapibus&vestibulum=duis&ante=at&ipsum=velit&primis=eu&in=est&faucibus=congue&orci=elementum&luctus=in&et=hac&ultrices=habitasse",
+  "fromYear": 2002,
+  "toYear": 1968
+}, {
+  "id": 4,
+  "project_title": "Hochschule für Berufstätige Rendsburg",
+  "description": "Bubalus arnee",
+  "project_link": "http://economist.com/ut.jpg?condimentum=auctor&id=sed&luctus=tristique&nec=in&molestie=tempus&sed=sit&justo=amet&pellentesque=sem&viverra=fusce&pede=consequat&ac=nulla&diam=nisl&cras=nunc&pellentesque=nisl&volutpat=duis&dui=bibendum&maecenas=felis&tristique=sed&est=interdum&et=venenatis&tempus=turpis&semper=enim&est=blandit&quam=mi&pharetra=in&magna=porttitor&ac=pede&consequat=justo&metus=eu&sapien=massa&ut=donec&nunc=dapibus&vestibulum=duis&ante=at&ipsum=velit&primis=eu&in=est&faucibus=congue&orci=elementum&luctus=in&et=hac&ultrices=habitasse",
+  "technologies": [
+    "curabitur at ipsum",
+    "sit amet erat",
+    "lectus"
+  ],
+  "fromYear": 2010,
+  "toYear": 2002
+}, {
+  "id": 5,
+  "project_title": "Université Panthéon-Sorbonne (Paris I)",
+  "description": "Corvus brachyrhynchos",
+  "project_link": "http://economist.com/ut.jpg?condimentum=auctor&id=sed&luctus=tristique&nec=in&molestie=tempus&sed=sit&justo=amet&pellentesque=sem&viverra=fusce&pede=consequat&ac=nulla&diam=nisl&cras=nunc&pellentesque=nisl&volutpat=duis&dui=bibendum&maecenas=felis&tristique=sed&est=interdum&et=venenatis&tempus=turpis&semper=enim&est=blandit&quam=mi&pharetra=in&magna=porttitor&ac=pede&consequat=justo&metus=eu&sapien=massa&ut=donec&nunc=dapibus&vestibulum=duis&ante=at&ipsum=velit&primis=eu&in=est&faucibus=congue&orci=elementum&luctus=in&et=hac&ultrices=habitasse",
+  "technologies": [
+    "tempus vel pede",
+    "ut nulla sed",
+    "pede"
+  ],
+  "fromYear": 2006,
+  // "toYear": 1992
+}
 ];
 
 const demoCertificationData = [{
@@ -186,35 +186,35 @@ const demoCertificationData = [{
 
 const platforms = [
   {
-    id: 1,
-    platformName: 'Mail',
-    link: 'mailto:kmaddy9122@gmail.com',
-    logo: "/images/gmail.png"
+    "id": 1,
+    "platformName": 'Mail',
+    "link": 'mailto:kmaddy9122@gmail.com',
+    "logo": "/images/gmail.png"
   },
   {
-    id: 2,
-    platformName: 'Facebook',
-    link: 'https://www.facebook.com',
-    logo: "/images/facebook.png"
+    "id": 2,
+    "platformName": 'Facebook',
+    "link": 'https://www.facebook.com',
+    "logo": "/images/facebook.png"
   },
   {
-    id: 3,
-    platformName: 'LinkedIn',
-    link: 'https://www.linkedin.com',
-    logo: "/images/linkedin.png"
+    "id": 3,
+    "platformName": 'LinkedIn',
+    "link": 'https://www.linkedin.com',
+    "logo": "/images/linkedin.png"
   },
   {
-    id: 4,
-    platformName: 'HackerRank',
-    link: 'https://www.hackerrank.com',
-    logo: "/images/hackerrank.png"
+    "id": 4,
+    "platformName": 'HackerRank',
+    "link": 'https://www.hackerrank.com',
+    "logo": "/images/hackerrank.png"
   },
   {
-    id: 5,
-    platformName: 'Codechef',
-    link: 'https://www.codechef.com',
-    logo: "/images/codechef.png"
+    "id": 5,
+    "platformName": 'Codechef',
+    "link": 'https://www.codechef.com',
+    "logo": "/images/codechef.png"
   },
 ]
 
-  export { demoEducationData, demoExperienceData, demoCertificationData, platforms }
+export { demoEducationData, demoExperienceData, demoCertificationData, platforms }

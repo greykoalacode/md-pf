@@ -29,17 +29,17 @@ const EachEvent =({ title, subtitle, description, fromYear, toYear}) => {
 }
 
 
-function Education() {
+function Education({education}) {
   return (
     <Box className="education" padding="2.5">
         <Text fontSize="4xl" className="education-title">Education</Text>
         <VerticalTimeline animate={false}>
             {
-                demoEducationData
+                education
                 .sort((a,b) => descending(a,b,'fromYear'))
                 .map(
                     each => {
-                        const {id, institution, education, description, fromYear, toYear} = each;
+                        const {id, institution, education, description, fromYear, toYear} = each.fields;
                         return (
                             <EachEvent key={id} title={institution} subtitle={education} description={description} fromYear={fromYear} toYear={toYear} />
 

@@ -9,14 +9,13 @@ import { Box } from '@chakra-ui/layout'
 import { TagLabel } from '@chakra-ui/tag'
 import { Tag } from '@chakra-ui/tag'
 import React from 'react'
-import { demoCertificationData, demoExperienceData } from '../../Data/Homepage'
 import { descending } from '../../utils/sort';
 
 const CertificationCard= ({title, subtitle, link}) => {
     return (
         <Box padding={[1,2,3]} margin={[1,2,3]}>
             <Wrap align="center" justify="space-between">
-                <Text my="1" fontSize="2xl">{title}</Text>
+                <Text fontWeight="bold" className="paragraph" my="1" fontSize="2xl">{title}</Text>
                 <Link isExternal href={link}>
                     <ExternalLinkIcon />
                 </Link>
@@ -51,10 +50,11 @@ const ExperienceCard = ({project_title, fromYear, toYear, description, technolog
             <Wrap mb="2">
                 {
                     technologies
+                    .split(',')                    
                     .sort((a,b) => descending(a,b,'fromYear'))
                     .map(
                         each => (
-                        <WrapItem>
+                        <WrapItem key={each}>
                             <Tag key={each} backgroundColor="#ffdae9">
                                 <TagLabel className="paragraph">{each}</TagLabel>
                             </Tag>
@@ -68,16 +68,17 @@ const ExperienceCard = ({project_title, fromYear, toYear, description, technolog
     );
 }
 
-function Experience() {
+function Experience({experience, certification}) {
     return (
         <Grid  templateColumns="repeat(auto-fit, minmax(500px,1fr)" justifyContent="space-between" className="experience">
             <VStack>
                 <Text fontSize="4xl" className="experience-title">Learnings & Experiences</Text>
                 <Wrap className="experience-box" spacing={[3,null,10]}>
                 {
-                    demoExperienceData.map(
+                    experience.map(
                         each => {
-                        const {id, project_link, project_title, description, fromYear, toYear, technologies} = each;
+                            console.log(each.fields)
+                        const {id, project_link, project_title, description, fromYear, toYear, technologies} = each.fields;
                         return(
                             <ExperienceCard key={id} project_link={project_link} project_title={project_title} description={description} fromYear={fromYear} toYear={toYear} technologies={technologies} />
                         )
@@ -90,9 +91,9 @@ function Experience() {
                 <Text fontSize="4xl" mt="5" className="experience-title">Certifications</Text>
                 <Wrap spacing={[2,3,5]} justify="space-between" className="experience-box">
                 {
-                    demoCertificationData.map(
+                    certification.map(
                         each => {
-                        const {id, title, subtitle, link} = each;
+                        const {id, title, subtitle, link} = each.fields;
                         return(
                             <CertificationCard key={id} title={title} subtitle={subtitle} link={link} />
                         )
