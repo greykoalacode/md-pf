@@ -12,15 +12,33 @@ import { Tag } from '@chakra-ui/tag'
 import React from 'react'
 import { descending } from '../../utils/sort';
 
+const CheckLink = ({link, children}) => {
+    return(
+        <>
+        {
+            link ? (
+                <Link isExternal href={link}>
+                    {children}
+                </Link>
+            ) : (
+                <>
+                {children}
+                </>
+            )
+        }
+        </>
+    )
+}
+
 const CertificationCard= ({title, subtitle, link}) => {
     return (
         <Box padding={[1,2,3]} margin={[1,2,3]}>
-            <Link isExternal href={link}>
+            <CheckLink link={link}>
                 <Flex alignItems="center">
                     <Text fontWeight="bold" className="paragraph-trunc" my="1" fontSize="2xl">{title}</Text>
                     <ExternalLinkIcon ml="3" />
                 </Flex>
-            </Link>
+            </CheckLink>
             <Text my="1" className="paragraph">{subtitle}</Text>
         </Box>
     )
@@ -43,9 +61,13 @@ const ExperienceCard = ({project_title, fromYear, toYear, description, technolog
                         {description}
                     </Text>
                 </WrapItem>
-                <WrapItem>
-                    <Link href={project_link} isExternal className="paragraph">Check it here<ExternalLinkIcon mx="2" /></Link>
-                </WrapItem>
+                {
+                    project_link !== '' && (
+                        <WrapItem>
+                            <Link href={project_link} isExternal className="paragraph">Check it here<ExternalLinkIcon mx="2" /></Link>
+                        </WrapItem>
+                    )
+                }
             </Wrap>
             <Text fontWeight="bold"  className="paragraph" py="1">Technology / Domain</Text>
             <Wrap mb="2">
