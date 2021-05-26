@@ -50,10 +50,14 @@ function About({about}) {
                 <Wrap justify={["center","center","center","center","space-between"]} align="center" >
                     <WrapItem>
                         <TextCard>
-                            <Text fontSize="lg" className="paragraph">
-                                {about.about_me}
-                            {/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio cumque temporibus quas, accusamus, molestias quos ipsam quidem mollitia voluptate optio fugiat voluptates impedit repellat, corrupti minus blanditiis ad expedita voluptatum laudantium exercitationem. Consequatur, assumenda! Optio nostrum eligendi odit velit. */}
-                            </Text>
+                            {
+                                about.about_me.split('.').filter( each => each !== '').map(
+                                    eachV => 
+                                    <Text key={eachV} fontSize="lg" className="paragraph">
+                                        {`${eachV}.`}
+                                    </Text>
+                                )
+                            }
                         </TextCard>
                     </WrapItem>
                     <WrapItem alignContent="center">
@@ -64,10 +68,10 @@ function About({about}) {
                             height={450}
                         />
                     </WrapItem>
-                    <WrapItem maxW="250px">
-                        <Box>
+                    <WrapItem maxW={[null,null,"250px"]} alignSelf="stretch">
+                        <Box pt="8">
                             <Text fontSize="4xl">Skills</Text>
-                            <Wrap>
+                            <Wrap my="5" spacing="5">
                             {
                                 about.skills.split(',').map(
                                     each => <HobbyCard key={each} hobby={each} />
@@ -92,10 +96,10 @@ function About({about}) {
                             height={450}
                         />
                     </WrapItem>
-                    <WrapItem maxW="250px">
-                        <Box>
+                    <WrapItem maxW="250px" alignSelf="stretch">
+                        <Box pt="8">
                             <Text fontSize="4xl">Hobbies</Text>
-                            <Wrap>
+                            <Wrap my="5" spacing="5">
                             {
                                 about.hobbies.split(',').map(
                                     each => <HobbyCard key={each} hobby={each} />
