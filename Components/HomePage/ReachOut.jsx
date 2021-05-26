@@ -16,7 +16,7 @@ function ReachOut({platforms}) {
                         platforms.map(
                             each => {
                                 const {id, platformName, link, logo} = each.fields;
-                                console.log(logo)
+                                // console.log(logo)
                                 return(
                                     <WrapItem key={id} minW="100px" >
                                         <Link isExternal href={link} m={[2,3,10]}>

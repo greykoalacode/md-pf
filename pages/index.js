@@ -9,21 +9,21 @@ import useData from '../handlers'
 
 
 
-export async function getServerSideProps(){
-  console.log(process.env.NEXT_PUBLIC_API_KEY)
+// export async function getServerSideProps(){
+//   // console.log(process.env.NEXT_PUBLIC_API_KEY)
 
-  return {
-    props: {
-      'e':'er'
-    }
-  }
-}
+//   return {
+//     props: {
+//       'e':'er'
+//     }
+//   }
+// }
 
 
 
 export default function Home() {
   const { data, getData } = useData();
-  console.log(process.env.NEXT_PUBLIC_API_KEY)
+  // console.log(process.env.NEXT_PUBLIC_API_KEY)
   // console.log(props)
   useEffect(() => {
     async function onPageLoad (){

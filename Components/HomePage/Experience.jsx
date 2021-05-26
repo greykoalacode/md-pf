@@ -77,7 +77,7 @@ function Experience({experience, certification}) {
                 {
                     experience.map(
                         each => {
-                            console.log(each.fields)
+                            // console.log(each.fields)
                         const {id, project_link, project_title, description, fromYear, toYear, technologies} = each.fields;
                         return(
                             <ExperienceCard key={id} project_link={project_link} project_title={project_title} description={description} fromYear={fromYear} toYear={toYear} technologies={technologies} />
