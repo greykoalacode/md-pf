@@ -10,23 +10,23 @@ import TextCard from './TextCard'
 
 const TitleDetail = ({title, detail, languages}) => {
     return (
-        <Stack mb="3">
-            <Text className="paragraph" fontWeight="bold">{title}</Text>
+        <Stack mb="3" >
+            <Text className="paragraph" color="#E8EEF1 !important" fontWeight="bold">{title}</Text>
             {
             languages ? (
                 <HStack spacing={2}>
                     {
                         languages.map(
                             each => (
-                                <Tag size="md" key={each} backgroundColor="#ffdae9">
-                                    <TagLabel className="paragraph">{each}</TagLabel>
+                                <Tag size="md" key={each} backgroundColor="#E8EEF1" color="#E8EEF1 !important">
+                                    <TagLabel>{each}</TagLabel>
                                 </Tag>
                             )
                         )
                     }
                 </HStack>
             ) : (
-                <Text className="paragraph" isTruncated>{detail}</Text>
+                <Text className="paragraph" color="#E8EEF1 !important" isTruncated>{detail}</Text>
             )
             }
             
@@ -36,7 +36,7 @@ const TitleDetail = ({title, detail, languages}) => {
 
 const HobbyCard = ({hobby}) => {
     return (
-        <Box backgroundColor="#ffadce" padding="0.5em" margin="1em" borderRadius="1em">
+        <Box backgroundColor="#43B0F1" color="" padding="0.5em" margin="1em" borderRadius="0.35em">
             <Text className="paragraph" fontWeight="bold">{hobby}</Text>
         </Box>
     )
@@ -44,9 +44,9 @@ const HobbyCard = ({hobby}) => {
 
 function About({about}) {
     return (
-        <Box id="about" padding="4.5em" backgroundColor="#ffdae9" className="about">
+        <Box id="about" padding={["2.5em 1em","4.5em"]} className="about">
             <Box padding="0" className="about-1">
-                <Text fontSize="5xl" className="about-title">About</Text>
+                <Text fontSize="5xl" textAlign="center" mb="1.5" className="about-title">About</Text>
                 <Wrap justify={["center","center","center","center","space-between"]} align="center" >
                     <WrapItem>
                         <TextCard>
@@ -60,17 +60,17 @@ function About({about}) {
                             }
                         </TextCard>
                     </WrapItem>
-                    <WrapItem alignContent="center">
+                    {/* <WrapItem alignContent="center">
                         <Image
                             src="/images/second.png"
                             alt="Hello"
                             width={275}
                             height={450}
                         />
-                    </WrapItem>
-                    <WrapItem maxW={[null,null,"250px"]} alignSelf="stretch">
+                    </WrapItem> */}
+                    <WrapItem alignSelf="stretch">
                         <Box pt="8">
-                            <Text fontSize="4xl">Skills</Text>
+                            <Text fontSize="4xl" fontWeight={500}>Skills</Text>
                             <Wrap my="5" spacing="5">
                             {
                                 about.skills.split(',').map(
@@ -88,17 +88,17 @@ function About({about}) {
             </Box>
 
                 <Wrap align="center" justify={["center","center","center","center","space-between"]} spacing="2em">
-                    <WrapItem>
+                    {/* <WrapItem>
                         <Image
                             src="/images/sing.png"
                             alt="Hello"
                             width={275}
                             height={450}
                         />
-                    </WrapItem>
-                    <WrapItem maxW="250px" alignSelf="stretch">
+                    </WrapItem> */}
+                    <WrapItem>
                         <Box pt="8">
-                            <Text fontSize="4xl">Hobbies</Text>
+                            <Text fontSize="4xl" fontWeight={500}>Hobbies</Text>
                             <Wrap my="5" spacing="5">
                             {
                                 about.hobbies.split(',').map(
@@ -110,7 +110,7 @@ function About({about}) {
                     </WrapItem>
                     <WrapItem>
                         <TextCard>
-                            <Text fontSize="4xl">Key Details</Text>
+                            <Text fontSize="4xl" fontWeight={500} color="#E8EEF1 !important">Key Details</Text>
                             <TitleDetail title="Email" detail={about.email} />
                             <TitleDetail title="Address" detail={about.address} />
                             <TitleDetail title="Date of Birth" detail={about.dob} />
