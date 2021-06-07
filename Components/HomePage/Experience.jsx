@@ -35,23 +35,23 @@ const CertificationCard= ({title, subtitle, link}) => {
         <Box padding={[1,2,3]} margin={[1,2,3]}>
             <CheckLink link={link}>
                 <Flex alignItems="center">
-                    <Text fontWeight="bold" className="paragraph-trunc" my="1" fontSize="2xl">{title}</Text>
+                    <Text fontWeight="bold" className="paragraph-trunc" color="#057DCD !important" my="1" fontSize="2xl">{title}</Text>
                     <ExternalLinkIcon ml="3" />
                 </Flex>
             </CheckLink>
-            <Text my="1" className="paragraph">{subtitle}</Text>
+            <Text my="1" className="paragraph" color="#057DCD !important">{subtitle}</Text>
         </Box>
     )
 }
 
 const ExperienceCard = ({project_title, fromYear, toYear, description, technologies, project_link}) => {
     return(
-        <Box minW="280px" padding="1em" margin="1em" backgroundColor="#ffadce" borderRadius="0.5em">
+        <Box minW="280px" padding="1em"  margin="1em" backgroundColor="#43B0F1" borderRadius="0.35em">
             <Wrap align="center" justify="space-between">
                 <WrapItem>
-                    <Text fontSize="2xl">{project_title}</Text>
+                    <Text color="#E8EEF1 !important" fontSize="2xl" fontWeight={500}>{project_title}</Text>
                 </WrapItem>
-                <WrapItem>
+                <WrapItem color="#E8EEF1 !important">
                     {toYear ? `${fromYear} to ${toYear}` : `${fromYear}`}
                 </WrapItem>
             </Wrap>
@@ -78,8 +78,8 @@ const ExperienceCard = ({project_title, fromYear, toYear, description, technolog
                     .map(
                         each => (
                         <WrapItem key={each}>
-                            <Tag key={each} backgroundColor="#ffdae9">
-                                <TagLabel className="paragraph">{each}</TagLabel>
+                            <Tag key={each} backgroundColor="#E8EEF1">
+                                <TagLabel>{each}</TagLabel>
                             </Tag>
                         </WrapItem>
                         )
@@ -95,13 +95,13 @@ function Experience({experience, certification}) {
     return (
         <Grid  templateColumns="repeat(auto-fit, minmax(500px,1fr)" justifyContent="space-between" className="experience">
             <VStack>
-                <Text fontSize="4xl" className="experience-title">Learnings & Experiences</Text>
+                <Text fontSize="5xl" className="experience-title" fontWeight={500}>Learnings & Experiences</Text>
                 <Wrap className="experience-box" spacing={[3,null,10]}>
                 {
                     experience.map(
                         each => {
                             // console.log(each.fields)
-                        const {id, project_link, project_title, description, fromYear, toYear, technologies} = each.fields;
+                        const {id, project_link, project_title, description, fromYear, toYear, technologies} = each;
                         return(
                             <ExperienceCard key={id} project_link={project_link} project_title={project_title} description={description} fromYear={fromYear} toYear={toYear} technologies={technologies} />
                         )
@@ -111,12 +111,12 @@ function Experience({experience, certification}) {
                 </Wrap>
             </VStack>
             <VStack align="stretch" mt="20">
-                <Text fontSize="4xl" className="experience-title">Certifications</Text>
+                <Text fontSize="4xl" fontWeight="500" className="experience-title">Certifications</Text>
                 <Wrap spacing={[2,3,5]} justify="flex-start" className="experience-box">
                 {
                     certification.map(
                         each => {
-                        const {id, title, subtitle, link} = each.fields;
+                        const {id, title, subtitle, link} = each;
                         return(
                             <CertificationCard key={id} title={title} subtitle={subtitle} link={link} />
                         )
