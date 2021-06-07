@@ -19,6 +19,7 @@ function Poster() {
             <Image
                 className="poster-image poster-image-gradient"
                 src="/images/profile1.jpg"
+                layout="responsive"
                 alt="Hello"
                 width={380}
                 height={480}
