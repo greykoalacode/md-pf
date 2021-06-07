@@ -4,7 +4,7 @@ const ApiKey = process.env.NEXT_PUBLIC_API_KEY;
 const BaseID = process.env.NEXT_PUBLIC_BASE_ID;
 
 // console.log(ApiKey,BaseID)
-const base = new Airtable({apiKey: ApiKey}).base(BaseID);
+const base = new Airtable({endpointUrl: 'https://api.airtable.com',apiKey: ApiKey}).base(BaseID);
 
 // axios.defaults.baseURL = `https://api.airtable.com/v0/${BaseID}`;
 
