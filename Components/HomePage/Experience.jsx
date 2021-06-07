@@ -34,10 +34,10 @@ const CertificationCard= ({title, subtitle, link}) => {
     return (
         <Box padding={[1,2,3]} margin={[1,2,3]}>
             <CheckLink link={link}>
-                <Flex alignItems="center">
+                <Wrap align="center">
                     <Text fontWeight="bold" className="paragraph-trunc" color="#057DCD !important" my="1" fontSize="2xl">{title}</Text>
                     <ExternalLinkIcon ml="3" />
-                </Flex>
+                </Wrap>
             </CheckLink>
             <Text my="1" className="paragraph" color="#057DCD !important">{subtitle}</Text>
         </Box>
