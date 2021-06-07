@@ -3,7 +3,7 @@ import React from 'react'
 
 function TextCard({children, ...rest}) {
     return (
-        <Box backgroundColor="#FFADCE" padding="1.75em" borderRadius="1em" maxWidth="600px"{...rest}>
+        <Box backgroundColor="#43B0F1 !important" padding={["1em","1.75em"]} borderRadius="0.35em" maxWidth="600px"{...rest}>
             {children}
         </Box>
     )
