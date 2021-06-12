@@ -141,13 +141,10 @@ body{
 @media screen and (max-width: $medium){
     .poster{
         padding: 3em 2.5em;
-        // position: relative;
-        // background: rgb(255,218,233);
-        // background: linear-gradient(330deg,  rgba(255,218,233,1) 36%, rgba(37,51,139,1) 36%, rgba(37,51,139,1) 38%, rgba(255,218,233,1) 38% );
-        &-about-link{
-            // position: absolute;
-            // bottom: 1.5em;
-            // right: 1em;
-        }
+    }
+    .svg{
+        height: 50vh;
+        width: 70vw;
     }
 }
+

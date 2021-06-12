@@ -35,7 +35,7 @@ function ReachOut({platforms}) {
                     </Wrap>
                 </WrapItem>
                 <WrapItem>
-                    <ReachSVG width="40vw" height="40vh" />
+                    <ReachSVG className="svg" width="40vw" height="40vh" />
                     {/* <Image src="/images/third.png" width={275} height={450} /> */}
                 </WrapItem>
 
