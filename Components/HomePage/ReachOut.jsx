@@ -4,6 +4,7 @@ import { Flex } from '@chakra-ui/layout'
 import { Box } from '@chakra-ui/layout'
 import Image from 'next/image'
 import React from 'react'
+import ReachSVG from './ReachSVG'
 // import { platforms } from '../../Data/Homepage'
 
 function ReachOut({platforms}) {
@@ -34,7 +35,8 @@ function ReachOut({platforms}) {
                     </Wrap>
                 </WrapItem>
                 <WrapItem>
-                    <Image src="/images/third.png" width={275} height={450} />
+                    <ReachSVG width="40vw" height="40vh" />
+                    {/* <Image src="/images/third.png" width={275} height={450} /> */}
                 </WrapItem>
 
             </Wrap>
