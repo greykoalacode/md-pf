@@ -17,7 +17,7 @@ function Poster() {
                 <motion.h1 initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ease: 'linear', delay: 0.5}} className="poster-title">Manasi</motion.h1>
                 <motion.h1 initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ease: 'linear', delay: 1}} className="poster-title poster-title-2">Deshpande</motion.h1>
             </SimpleGrid>
-            <WalkSVG className="svg" width="45vw" height="45vh" />
+            <WalkSVG className="svg svg-about" width="45vw" height="45vh" />
             {/* <Image
                 className="poster-image poster-image-gradient"
                 src="/images/profile1.jpg"

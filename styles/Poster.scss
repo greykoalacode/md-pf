@@ -134,10 +134,17 @@ body{
 @media screen and (max-width: $medium){
     .poster{
         padding: 3em 2.5em;
+        justify-content: center;
+    }
+    .poster-about-link{
+        margin-left: auto !important;
     }
     .svg{
-        height: 47vh;
+        height: 50vh;
         width: 70vw;
+        // &-about{
+        //     height: 40vh;
+        // }
     }
 }
 
