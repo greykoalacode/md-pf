@@ -26,6 +26,7 @@ const TitleDetail = ({title, detail, languages}) => {
                     }
                 </HStack>
             ) : (
+                title === 'email' ? <Link className="paragraph" color="#E8EEF1 !important" isTruncated>{detail}</Link>:
                 <Text className="paragraph" color="#E8EEF1 !important" isTruncated>{detail}</Text>
             )
             }
