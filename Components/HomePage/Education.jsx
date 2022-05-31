@@ -6,7 +6,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { demoEducationData } from "../../Data/Homepage";
 import { descending } from "../../utils/sort";
 
 const EachEvent =({ title, subtitle, description, fromYear, toYear}) => {

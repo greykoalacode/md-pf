@@ -49,7 +49,7 @@ export default function Home() {
       {
         data && (
           <>
-            <Poster />
+            <Poster details={data[5][0]} />
             <About about={data[4][0]} />
             <Education education={data[3]} />
             <Experience experience={data[0]} certification={data[2]} />

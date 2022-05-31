@@ -16,7 +16,7 @@ export default function useData() {
     const[data, setData] = useState(null);
 
     const getData = async () => {
-        const endpoints = ['Projects','Platforms','Certifications', 'Education', 'About'];
+        const endpoints = ['Projects','Platforms','Certifications', 'Education', 'About','Homepage'];
         const requests  = endpoints.map(
             each => base(each).select().all());
         // const requests = endpoints.map(
