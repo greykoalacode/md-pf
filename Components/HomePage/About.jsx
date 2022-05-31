@@ -1,7 +1,7 @@
 import { Stack, Wrap, WrapItem } from '@chakra-ui/layout'
 import { Box } from '@chakra-ui/layout'
 import { HStack } from '@chakra-ui/layout'
-import { Text } from '@chakra-ui/layout'
+import { Text, Link } from '@chakra-ui/layout'
 import { TagLabel } from '@chakra-ui/tag'
 import { Tag } from '@chakra-ui/tag'
 import Image from 'next/image'
