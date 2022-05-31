@@ -28,7 +28,7 @@ export default function useData() {
                 eachObj => ({...eachObj.fields})
             )
         )
-        console.log(modifiedResp)
+        // console.log(modifiedResp)
         return setData(modifiedResp)
     }
     return {
